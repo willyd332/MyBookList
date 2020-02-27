@@ -14,16 +14,30 @@
         <h1 class="title">WILL'S BOOK LIST</h1>
       </div>
 
-      <div id="searchDiv" class="queryDiv">
-        Search
-      </div>
-
-      <div id="filterDiv" class="queryDiv">
-        Filter
-      </div>
-
       <div class="bookDiv">
-        Books
+          <% for (let i = 0; i < books.length; i++) { %>
+          <% const words = books[i].name.split(" ")%>
+          <% books[i].author.split(" ").forEach((auth) => {words.push(auth)})%>
+          <% const query = words.join("+") %>
+          <% if(i % 2 == 0){ %>
+            <ul class="bookList">
+              <a href="https://www.google.com/search?q=<%=query%>" target="_blank">
+                <li class="bookItem">
+                  <h4><%=books[i].name%> - <%=books[i].author%></h4>
+                </li>
+              </a>
+            </ul>
+          <% } else { %>
+            <ul class="bookList">
+              <a href="https://www.google.com/search?q=<%=query%>" target="_blank">
+                <li class="bookItem">
+                  <h4><%=books[i].name%> - <%=books[i].author%></h4>
+                </li>
+              </a>
+            </ul>
+          <% } %>
+          <% } %>
+        </ul>
       </div>
 
     </div>

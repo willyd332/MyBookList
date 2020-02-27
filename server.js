@@ -32,15 +32,15 @@ const addBooks = (bookArr, response) => {
 
 
 app.get('/', (req, res) => {
-
-    res.render("index.ejs");
-
+    Book.find({}, (err, foundBooks)=>{
+    res.render('index.ejs', {
+      books: foundBooks
+    })
+  })
 });
 
 app.get('/new', (req, res) => {
-
     res.render("new.ejs");
-
 });
 
 app.post('/', (req, res) => {
