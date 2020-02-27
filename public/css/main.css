@@ -1,0 +1,67 @@
+body {
+  background-color: #84A5B8;
+}
+
+div {
+  border: 1px solid black;
+  font-family: 'Libre Baskerville';
+  color: #CBCBCB;
+}
+
+
+.title {
+  text-align: center;
+}
+
+.titleDiv {
+  width: 100%;
+
+}
+
+.queryDiv {
+  width: 46%;
+  margin: 1%;
+  display: inline-block;
+}
+
+#searchDiv {
+
+}
+
+#filterDiv {
+
+}
+
+.bookDiv {
+
+}
+
+#bookInput {
+  width: 80%;
+  height: 25vh;
+  margin-left: 8%;
+  padding: 1%;
+  border: none;
+  text-align: left;
+  background-color: #B3DAF1;
+  color: #84A5B8;
+}
+
+.password {
+  width: 80%;
+  margin-left: 8%;
+  padding: 1%;
+  background-color: #B3DAF1;
+  color: #84A5B8;
+  border: none;
+  margin-bottom: 5px;
+}
+
+.submit {
+  font-size: 15px;
+  background-color: #B3DAF1;
+  color: #84A5B8;
+  border: none;
+  margin: auto;
+  display: block;
+}
